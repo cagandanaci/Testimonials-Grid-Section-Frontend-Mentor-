@@ -105,6 +105,11 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding-top: 2rem;
+        height: auto;
+    }
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
