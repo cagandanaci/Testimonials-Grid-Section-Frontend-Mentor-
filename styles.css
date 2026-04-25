@@ -13,6 +13,11 @@ h1 {
     line-height: 2rem;
 }
 
+p {
+    position: relative;
+    margin-bottom: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -110,7 +115,9 @@ body {
         padding-top: 2rem;
         height: auto;
     }
+
     .container {
+        width: 90%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, auto);
     }
@@ -118,5 +125,9 @@ body {
     .hTwoGrids, .vTwoGrids {
         grid-column: span 1;
         grid-row: span 1;
+    }
+
+    #first {
+        background-image: none;
     }
 }
