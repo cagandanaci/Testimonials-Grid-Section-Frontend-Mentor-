@@ -1,0 +1,117 @@
+html {
+    background-color: hsl(214, 17%, 92%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    color: hsl(217, 19%, 35%);
+    line-height: 1.5rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    line-height: 2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3rem;
+    width: 70%;
+    max-width: 1440px;
+    padding: 2rem;
+}
+
+.regular, .hTwoGrids, .vTwoGrids {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.hTwoGrids {
+    grid-column: span 2;
+}
+
+.vTwoGrids {
+    grid-row: span 2;
+}
+
+#first {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-size: 9rem;
+    background-position: top right 5rem;
+    color: hsl(214, 17%, 92%);;
+}
+
+#second {
+    background-color: hsl(217, 19%, 38%);
+    color: hsl(214, 17%, 92%);;
+}
+#fifth {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 81%);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+.profile-text h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.profile-text p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .hTwoGrids, .vTwoGrids {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .hTwoGrids, .vTwoGrids {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
